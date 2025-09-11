@@ -1,0 +1,322 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accessibility Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 220 13% 20%;
+  }
+  
+  .dark {
+    --border: 220 13% 80%;
+    --input: 220 13% 80%;
+    --ring: 220 13% 80%;
+  }
+}
+
+/* Not Every Mom Design System - M.O.M AI & Community
+All colors are HSL format for consistent theming
+Brand colors: Powder Blue, Muted Gold, Dark Brown, Light Cyan, Deep Green
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --powder-blue: 200 35% 70%;        /* #97b8cb */
+    --muted-gold: 34 41% 61%;          /* #d99f60 */
+    --dark-brown: 25 51% 13%;          /* #2d1309 */
+    --light-cyan: 189 100% 96%;        /* #edfdff */
+    --deep-green: 152 18% 32%;         /* #415b4f */
+
+    /* Persona-specific color themes */
+    /* Nurturing Nancy - Warm coral/pink tones */
+    --nancy-primary: 15 85% 65%;        /* Warm coral */
+    --nancy-secondary: 345 60% 75%;     /* Soft pink */
+    --nancy-accent: 25 70% 80%;         /* Peachy tone */
+    --nancy-muted: 15 30% 92%;          /* Very light coral */
+    --nancy-gradient: linear-gradient(135deg, hsl(var(--nancy-primary)), hsl(var(--nancy-secondary)));
+
+    /* Wise Willow - Deep green/forest tones */
+    --willow-primary: 152 45% 35%;      /* Deep forest green */
+    --willow-secondary: 140 35% 45%;    /* Medium sage */
+    --willow-accent: 130 25% 60%;       /* Muted olive */
+    --willow-muted: 152 20% 90%;        /* Very light sage */
+    --willow-gradient: linear-gradient(135deg, hsl(var(--willow-primary)), hsl(var(--willow-secondary)));
+
+    /* Caring Clara - Calming blue/teal tones */
+    --clara-primary: 186 60% 55%;       /* Calming teal */
+    --clara-secondary: 200 50% 65%;     /* Soft blue */
+    --clara-accent: 175 40% 75%;        /* Light aqua */
+    --clara-muted: 186 25% 92%;         /* Very light teal */
+    --clara-gradient: linear-gradient(135deg, hsl(var(--clara-primary)), hsl(var(--clara-secondary)));
+
+    /* Loving Luna - Purple/lavender tones */
+    --luna-primary: 270 65% 60%;        /* Rich purple */
+    --luna-secondary: 290 50% 70%;      /* Soft lavender */
+    --luna-accent: 260 40% 80%;         /* Light lilac */
+    --luna-muted: 270 25% 92%;          /* Very light lavender */
+    --luna-gradient: linear-gradient(135deg, hsl(var(--luna-primary)), hsl(var(--luna-secondary)));
+    
+    /* Semantic Design Tokens */
+    --background: 189 100% 96%;        /* Light Cyan background */
+    --foreground: 25 51% 13%;          /* Dark Brown text */
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 51% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 51% 13%;
+
+    --primary: 200 35% 70%;            /* Powder Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 34 41% 61%;           /* Muted Gold */
+    --secondary-foreground: 25 51% 13%;
+
+    --muted: 189 100% 96%;
+    --muted-foreground: 152 18% 32%;
+
+    --accent: 152 18% 32%;             /* Deep Green */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 85%;
+    --input: 200 20% 90%;
+    --ring: 200 35% 70%;
+
+    --radius: 0.75rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--powder-blue)), hsl(var(--muted-gold)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--light-cyan)), hsl(var(--background)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--powder-blue)/0.03) 50%, hsl(var(--muted-gold)/0.03) 100%);
+    --gradient-warm: linear-gradient(45deg, hsl(var(--muted-gold) / 0.1), hsl(var(--powder-blue) / 0.1));
+    
+    /* Shadows */
+    --shadow-gentle: 0 4px 16px hsl(var(--powder-blue) / 0.15);
+    --shadow-warm: 0 8px 32px hsl(var(--muted-gold) / 0.2);
+    
+    /* Animations */
+    --transition-gentle: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode with warmer, more maternal tones */
+    --background: 152 18% 8%;          /* Very dark green */
+    --foreground: 189 100% 96%;        /* Light cyan text */
+
+    --card: 152 18% 12%;
+    --card-foreground: 189 100% 96%;
+
+    --popover: 152 18% 12%;
+    --popover-foreground: 189 100% 96%;
+
+    --primary: 200 35% 65%;            /* Slightly muted powder blue */
+    --primary-foreground: 152 18% 8%;
+
+    --secondary: 34 35% 55%;           /* Slightly muted gold */
+    --secondary-foreground: 152 18% 8%;
+
+    --muted: 152 18% 15%;
+    --muted-foreground: 200 20% 75%;
+
+    --accent: 34 41% 61%;              /* Muted Gold accent */
+    --accent-foreground: 152 18% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 189 100% 96%;
+
+    --border: 152 18% 20%;
+    --input: 152 18% 15%;
+    --ring: 200 35% 65%;
+
+    /* Dark mode persona adjustments */
+    --nancy-primary: 15 75% 70%;
+    --nancy-secondary: 345 55% 80%;
+    --nancy-muted: 15 20% 15%;
+
+    --willow-primary: 152 40% 50%;
+    --willow-secondary: 140 30% 60%;
+    --willow-muted: 152 15% 15%;
+
+    --clara-primary: 186 55% 65%;
+    --clara-secondary: 200 45% 75%;
+    --clara-muted: 186 20% 15%;
+
+    --luna-primary: 270 60% 70%;
+    --luna-secondary: 290 45% 80%;
+    --luna-muted: 270 20% 15%;
+    
+    --sidebar-background: 152 18% 10%;
+    --sidebar-foreground: 189 100% 96%;
+    --sidebar-primary: 200 35% 65%;
+    --sidebar-primary-foreground: 152 18% 8%;
+    --sidebar-accent: 152 18% 15%;
+    --sidebar-accent-foreground: 189 100% 96%;
+    --sidebar-border: 152 18% 20%;
+    --sidebar-ring: 200 35% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background: hsl(var(--background));
+    background-image: var(--gradient-subtle);
+    min-height: 100vh;
+  }
+  
+  /* Typography classes */
+  .font-heading {
+    font-family: 'Didot', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  .font-heading-bold {
+    font-family: 'Didot', Georgia, serif;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .font-body {
+    font-family: 'Helvetica', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Gradient utilities */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .bg-gradient-nancy {
+    background: var(--nancy-gradient);
+  }
+
+  .bg-gradient-willow {
+    background: var(--willow-gradient);
+  }
+
+  .bg-gradient-clara {
+    background: var(--clara-gradient);
+  }
+
+  .bg-gradient-luna {
+    background: var(--luna-gradient);
+  }
+  
+/* Animation utilities */
+.transition-gentle {
+  transition: var(--transition-gentle);
+}
+
+/* Animation delay utilities */
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-600 { animation-delay: 600ms; }
+.animation-delay-800 { animation-delay: 800ms; }
+
+/* Floating animations */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(10px); }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-float-slower { animation: float-slower 8s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 7s ease-in-out infinite; }
+.animate-pulse-gentle { animation: pulse-gentle 4s ease-in-out infinite; }
+
+/* Enhanced accessibility support */
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .transition-gentle {
+    transition: var(--transition-reduced);
+  }
+}
+
+/* High contrast preference */
+@media (prefers-contrast: high) {
+  :root {
+    --border: hsl(var(--foreground));
+    --input: hsl(var(--background));
+    --ring: hsl(var(--foreground));
+    --focus-ring-width: 3px;
+  }
+  
+  .border {
+    border-width: 2px;
+  }
+}
+
+/* Enhanced focus indicators */
+*:focus-visible {
+  outline: var(--focus-ring-width) solid hsl(var(--ring));
+  outline-offset: var(--focus-ring-offset);
+}
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
