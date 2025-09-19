@@ -1,4 +1,4 @@
-import { Heart, Mail, MessageCircle, Users } from "lucide-react";
+import { BadgeQuestionMark, BookHeart, Handshake, Heart, Info, Mail, MessageCircle, Users } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Heart className="w-8 h-8 text-powder-blue" />
-              <span className="font-display text-2xl font-bold text-deep-green">M.O.M AI</span>
+              <span className="font-display text-2xl font-bold text-deep-green">Not Every Mom</span>
             </div>
             <p className="font-sans text-muted-foreground text-sm leading-relaxed">
               Your Maternal AI companion and supportive community for comfort, guidance, and healing.
@@ -25,7 +25,7 @@ const Footer = () => {
           </div>
           
           {/* Features */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h3 className="font-display text-lg font-semibold text-deep-green">Features</h3>
             <ul className="space-y-2 font-sans text-sm text-muted-foreground">
               <li>
@@ -61,31 +61,41 @@ const Footer = () => {
                 </button>
               </li>
             </ul>
-          </div>
+          </div> */}
           
           {/* Support */}
           <div className="space-y-4">
             <h3 className="font-display text-lg font-semibold text-deep-green">Support</h3>
-            <ul className="space-y-2 font-sans text-sm text-muted-foreground">
+            <ul className="space-y-2 font-sans text-sm text-muted-foreground">              
               <li>
                 <button 
-                  onClick={() => navigate("/faq")}
-                  className="hover:text-powder-blue transition-colors story-link"
+                  onClick={() => navigate("/about")}
+                  className="hover:text-powder-blue transition-colors story-link flex items-center"
                 >
-                  FAQ
+                  <Info className="w-4 h-4 mr-1" />
+                  About
                 </button>
               </li>
               <li>
+                <button 
+                  onClick={() => navigate("/faq")}
+                  className="hover:text-powder-blue transition-colors story-link flex items-center"
+                >
+                  <BadgeQuestionMark className="w-4 h-4 mr-1" />
+                  FAQ
+                </button>
+              </li>              
+              {/* <li>
                 <button 
                   onClick={() => navigate("/app/settings")}
                   className="hover:text-powder-blue transition-colors story-link"
                 >
                   Account Settings
                 </button>
-              </li>
+              </li> */}
               <li>
                 <a 
-                  href="mailto:support@momdi.com"
+                  href="mailto:support@NotEveryMom.com"
                   className="hover:text-powder-blue transition-colors story-link flex items-center"
                 >
                   <Mail className="w-4 h-4 mr-1" />
@@ -99,7 +109,33 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-display text-lg font-semibold text-deep-green">Get Started</h3>
             <ul className="space-y-2 font-sans text-sm text-muted-foreground">
+              <li>                
+                  <a 
+                  href="https://discord.gg/CUDd268B2w"
+                  className="hover:text-powder-blue transition-colors story-link flex items-center">
+                    <Users className="w-4 h-4 mr-1" />
+                    Discord Community
+                  </a>
+              </li>
               <li>
+                <button 
+                  onClick={() => navigate("/resources")}
+                  className="hover:text-powder-blue transition-colors story-link flex items-center"
+                >
+                  <BookHeart className="w-4 h-4 mr-1" />
+                  Resources
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => navigate("/volunteer")}
+                  className="hover:text-powder-blue transition-colors story-link flex items-center"
+                >
+                  <Handshake className="w-4 h-4 mr-1" />
+                  Volunteer
+                </button>
+              </li>
+              {/* <li>
                 <button 
                   onClick={() => {
                     localStorage.setItem('wantsOnboarding', 'true');
@@ -127,7 +163,7 @@ const Footer = () => {
                   <Users className="w-4 h-4 mr-1" />
                   Join Community
                 </button>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -137,7 +173,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="font-sans text-sm text-muted-foreground">
-              © {new Date().getFullYear()} M.O.M AI. All rights reserved.
+              © {new Date().getFullYear()} "Not Every Mom" & "M.O.M AI." All rights reserved.
             </div>
             
             {/* Legal Links */}

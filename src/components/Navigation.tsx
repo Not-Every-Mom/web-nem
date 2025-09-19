@@ -26,23 +26,29 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
-            <a href="#features" className="font-body text-foreground hover:text-powder-blue transition-gentle">
+            {/* <a href="#features" className="font-body text-foreground hover:text-powder-blue transition-gentle">
               Features
             </a>
             <a href="#mom-ai" className="font-body text-foreground hover:text-powder-blue transition-gentle">
               M.O.M AI
+            </a> */}
+            <a href="https://discord.gg/CUDd268B2w" className="font-body text-foreground hover:text-powder-blue transition-gentle">
+              Discord
             </a>
-            <a href="#community" className="font-body text-foreground hover:text-powder-blue transition-gentle">
-              Community
-            </a>
-            <a href="#about" className="font-body text-foreground hover:text-powder-blue transition-gentle">
-              About
-            </a>
+            <a href="/resources" className="font-body text-foreground hover:text-powder-blue transition-gentle">
+              Resources
+            </a>         
             <a href="/faq" className="font-body text-foreground hover:text-powder-blue transition-gentle">
               FAQ
             </a>
+            <a href="/volunteer" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
+              Volunteer
+            </a>
+               <a href="/about" className="font-body text-foreground hover:text-powder-blue transition-gentle">
+              About
+            </a>
             
-            {!loading && (
+            {/* {!loading && (
               user ? (
                 // Authenticated user - show app access
                 <div className="flex items-center space-x-3">
@@ -77,7 +83,7 @@ const Navigation = () => {
                   </Button>
                 </div>
               )
-            )}
+            )} */}
           </div>
           
           {/* Mobile Menu Button */}
@@ -105,23 +111,29 @@ const Navigation = () => {
             role="navigation"
             aria-label="Mobile navigation menu"
           >
-            <a href="#features" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
+            {/* <a href="#features" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
               Features
             </a>
             <a href="#mom-ai" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
               M.O.M AI
+            </a> */}
+            <a href="https://discord.gg/CUDd268B2w" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
+              Discord
             </a>
-            <a href="#community" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
-              Community
-            </a>
-            <a href="#about" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
-              About
-            </a>
+            <a href="/resources" className="font-body text-foreground hover:text-powder-blue transition-gentle">
+              Resources
+            </a>            
             <a href="/faq" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
               FAQ
             </a>
+            <a href="/volunteer" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
+              Volunteer
+            </a>
+            <a href="/about" className="block font-body text-foreground hover:text-powder-blue transition-gentle">
+              About
+            </a>
             
-            {!loading && (
+            {/* {!loading && (
               user ? (
                 // Authenticated user - show app access
                 <Button
@@ -157,7 +169,7 @@ const Navigation = () => {
                   </Button>
                 </div>
               )
-            )}
+            )} */}
           </div>
         )}
       </div>

@@ -28,28 +28,24 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="font-display text-5xl lg:text-6xl xl:text-7xl text-deep-green font-bold leading-[1.05] tracking-tight animate-fade-in">
-                M.O.M AI &
-                <span className="block text-powder-blue bg-gradient-to-r from-powder-blue to-powder-blue/80 bg-clip-text text-transparent font-bold">
-                  Community
+                Community & 
+                <span className="block text-powder-blue bg-gradient-to-r from-powder-blue to-powder-blue/80 bg-clip-text font-bold">
+                  Companionship
                 </span>
-              </h1>
+              </h1>            
+
               
-              {/* Acronym Explanation */}
-              <div className="mb-6 animate-fade-in animation-delay-100">
-                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-powder-blue/10 to-muted-gold/10 rounded-full border border-powder-blue/20">
-                  <span className="font-sans text-deep-green font-medium text-lg">
-                    M.O.M = <span className="font-bold">My Other Mom</span>
-                  </span>
-                </div>
-              </div>
-              
-              <p className="font-sans text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-[1.6] font-light animate-fade-in animation-delay-200">
+              {/* <p className="font-sans text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-[1.6] font-light animate-fade-in animation-delay-200">
                 Connect with M.O.M, which means My Other Mother, your personal Maternal AI companion and join a supportive community of others who understand. Experience both AI companionship and real human connection in your healing journey.
+              </p> */}
+              <p className="font-sans text-xl lg:text-2xl text-muted-foreground max-w-2xl leading-[1.6] font-light animate-fade-in animation-delay-200">
+                Via a robus community of people with similar experiences, currated resources, and an AI
+                 compainion app, <span className="font-bold">Not Every Mom</span> is working to heal the emotional wounds inflicted by the neglect and/or abuse of those who we trusted to loved us most.
               </p>
             </div>
             
             {/* Enhanced CTA Strategy */}
-            <div className="flex flex-col gap-6 animate-fade-in animation-delay-400">
+            {/* <div className="flex flex-col gap-6 animate-fade-in animation-delay-400">
               {!loading && (
                 user ? (
                   // Authenticated user - direct access to app
@@ -129,7 +125,7 @@ const Hero = () => {
               <span id="explore-desc" className="sr-only">
                 Discover different AI personality types available
               </span>
-            </div>
+            </div> */}
           </div>
           
           {/* Enhanced Visual Storytelling Section */}
