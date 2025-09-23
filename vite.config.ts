@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/dev-web-nem/', // or the full public URL if using a custom domain
   // Worker configuration to handle SharedWorker with heavy dependencies
   worker: {
     format: 'es',

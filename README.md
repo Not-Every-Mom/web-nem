@@ -1,3 +1,15 @@
+# Things Kate had to install locally to get things running... 
+
+Tailwind
+
+React
+
+Vite
+
+NPM
+
+Google Cloud SDK
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
