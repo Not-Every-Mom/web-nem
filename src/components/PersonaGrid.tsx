@@ -124,12 +124,12 @@ const PersonaGrid = () => {
           <img 
             src={
               persona.id === "wise-willow" 
-                ? "/lovable-uploads/09899035-77e1-40b7-912d-2800a1679cf6.png"
+                ? "/imgs/09899035-77e1-40b7-912d-2800a1679cf6.png"
                 : persona.id === "caring-clara"
-                ? "/lovable-uploads/735bc183-9b0d-4d65-9863-e8a30c43aa1e.png"
+                ? "/imgs/735bc183-9b0d-4d65-9863-e8a30c43aa1e.png"
                 : persona.id === "loving-luna"
-                ? "/lovable-uploads/213d982f-72d6-456b-b5a7-a6697c52712b.png"
-                : "/lovable-uploads/9f0e89c5-0c32-47a2-a7a0-c8f97afc1fa2.png"
+                ? "/imgs/213d982f-72d6-456b-b5a7-a6697c52712b.png"
+                : "/imgs/9f0e89c5-0c32-47a2-a7a0-c8f97afc1fa2.png"
             }
             alt={`${persona.name} profile portrait`}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 

@@ -137,7 +137,7 @@ const Hero = () => {
                 <div className="relative h-full">
                   {/* Primary story: The uploaded line art */}
                   <img 
-                    src="/lovable-uploads/61c4347a-7399-4940-859e-ccdb6aaf345b.png"
+                    src="/imgs/61c4347a-7399-4940-859e-ccdb6aaf345b.png"
                     alt="Beautiful line art illustration of a mother lovingly embracing her child, representing the nurturing care and unconditional love that M.O.M AI provides to users seeking comfort and guidance" 
                     className="w-full h-full object-cover object-center opacity-90 hover:opacity-100 transition-all duration-500 hover:scale-105"
                     style={{
