@@ -7,7 +7,7 @@ const Pillars = () => {
   const navigate = useNavigate();
   
   return (
-    <section className="py-24 px-8 lg:px-16 relative overflow-hidden">
+    <section className="py-8 px-8 lg:px-16 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-powder-blue/5 to-background/50" />
       
