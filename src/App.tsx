@@ -36,6 +36,7 @@ import { AdminCommunityPage } from "./pages/admin/AdminCommunityPage";
 import { AdminPersonasPage } from "./pages/admin/AdminPersonasPage";
 import { AdminContentPage } from "./pages/admin/AdminContentPage";
 import AdminBillingPage from "./pages/admin/AdminBillingPage";
+import { BASE_PATH } from "@/config";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -72,16 +73,16 @@ const App = () => {
                 <AccessibilityProvider>
                   <Routes>
                   {/* Public routes without app layout */}
-                  <Route path="/" element={<Index />} />
-                  <Route path="/onboarding" element={<Onboarding />} />
-                  <Route path="/auth" element={<AuthScreen />} />
+                  <Route path={BASE_PATH} element={<Index />} />
+                  {/* <Route path="/onboarding" element={<Onboarding />} /> */}
+                  {/* <Route path="/auth" element={<AuthScreen />} /> */}
                   
                   {/* Public resources (uses app shell but not protected) */}
                   <Route path="/resources" element={<AppLayout><ResourcesPage /></AppLayout>} />
                   <Route path="/faq" element={<FAQPage />} />
                   
                   {/* App routes with layout */}
-                  <Route path="/app" element={
+                  {/* <Route path="/app" element={
                     <ProtectedRoute>
                       <AppLayout>
                         <Outlet />
@@ -101,20 +102,20 @@ const App = () => {
                     <Route path="settings/faq" element={<FAQPage />} />
                     <Route path="settings/privacy" element={<PrivacyPolicyPage />} />
                     <Route path="settings/terms" element={<TermsOfServicePage />} />
-                  </Route>
+                  </Route> */}
 
                   {/* Legacy redirects */}
-                  <Route path="/chat" element={<Navigate to="/app/chat" replace />} />
+                  {/* <Route path="/chat" element={<Navigate to="/app/chat" replace />} />
                   <Route path="/history" element={<Navigate to="/app/history" replace />} />
                   <Route path="/community" element={<Navigate to="/app/community" replace />} />
                   <Route path="/billing" element={<Navigate to="/app/billing" replace />} />
-                  <Route path="/settings" element={<Navigate to="/app/settings" replace />} />
+                  <Route path="/settings" element={<Navigate to="/app/settings" replace />} /> */}
 
                   {/* Forum routes legacy thread path */}
-                  <Route path="/community/thread/:threadId" element={<ThreadDetailPage />} />
+                  {/* <Route path="/community/thread/:threadId" element={<ThreadDetailPage />} /> */}
                   
                   {/* Admin routes */}
-                  <Route path="/admin/login" element={<AdminLoginPage />} />
+                  {/* <Route path="/admin/login" element={<AdminLoginPage />} />
                   <Route path="/admin" element={
                     <AdminProtectedRoute>
                       <AdminLayout />
@@ -126,9 +127,9 @@ const App = () => {
                     <Route path="content" element={<AdminContentPage />} />
                     <Route path="billing" element={<AdminBillingPage />} />
                   </Route>
-                  
+                   */}
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                  <Route path="*" element={<NotFound />} />
+                  <Route path={BASE_PATH} element={<NotFound />} />
                   </Routes>
                 </AccessibilityProvider>
               </BrowserRouter>
