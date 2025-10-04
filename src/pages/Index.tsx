@@ -2,9 +2,6 @@ import { useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Pillars from "@/components/Pillars";
-import PersonaGrid from "@/components/PersonaGrid";
-import FeatureSection from "@/components/FeatureSection";
-import HowItWorks from "@/components/HowItWorks";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -42,16 +39,7 @@ const Index = () => {
       <Hero />
       <div data-animate>
         <Pillars />
-      </div>
-      {/* <div data-animate>
-        <PersonaGrid />
-      </div>
-      <div data-animate>
-        <FeatureSection />
-      </div>
-      <div data-animate>
-        <HowItWorks />
-      </div> */}
+      </div>      
       <Footer />
     </div>
   );

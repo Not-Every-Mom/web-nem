@@ -9,7 +9,7 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "publish": "gsutil -m cp -r ./dist/* gs://dev-web-nem/"
+    "pub": "vite build && gsutil -m cp -r ./dist/* gs://dev-web-nem/ && gcloud compute url-maps invalidate-cdn-cache web-url-map --path /*"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

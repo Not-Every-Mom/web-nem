@@ -1,6 +1,3 @@
-
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Heart, MessageCircle, Sparkles, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
@@ -43,89 +40,6 @@ const Hero = () => {
                  compainion app, <span className="font-bold">Not Every Mom</span> is working to heal the emotional wounds inflicted by the neglect and/or abuse of those who we trusted to loved us most.
               </p>
             </div>
-            
-            {/* Enhanced CTA Strategy */}
-            {/* <div className="flex flex-col gap-6 animate-fade-in animation-delay-400">
-              {!loading && (
-                user ? (
-                  // Authenticated user - direct access to app
-                  <div className="flex flex-col sm:flex-row gap-6">
-                    <Button
-                      variant="primary-hero"
-                      size="xl"
-                      onClick={() => navigate("/app/chat")}
-                      aria-describedby="start-chat-desc"
-                      className="group"
-                    >
-                      <MessageCircle className="mr-2 transition-transform group-hover:scale-110" aria-hidden="true" />
-                      Start Chatting
-                      <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
-                    </Button>
-                    <Button
-                      variant="secondary-hero"
-                      size="lg"
-                      onClick={() => navigate("/app")}
-                      aria-describedby="go-to-app-desc"
-                    >
-                      <User className="mr-2" aria-hidden="true" />
-                      Go to App
-                    </Button>
-                  </div>
-                ) : (
-                  // Unauthenticated user - show enhanced hierarchy
-                  <div className="space-y-6">
-                    <Button
-                      variant="primary-hero"
-                      size="xl"
-                      onClick={() => {
-                        localStorage.setItem('wantsOnboarding', 'true');
-                        navigate("/onboarding");
-                      }}
-                      aria-describedby="start-chatting-desc"
-                      className="group w-full sm:w-auto"
-                    >
-                      <MessageCircle className="mr-2 transition-transform group-hover:scale-110" aria-hidden="true" />
-                      Start Chatting Now
-                      <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
-                    </Button>
-                    <div className="flex flex-col sm:flex-row gap-5">
-                      <Button
-                        variant="secondary-hero"
-                        size="lg"
-                        onClick={() => navigate("/auth")}
-                        aria-describedby="sign-in-desc"
-                      >
-                        <User className="mr-2" aria-hidden="true" />
-                        Sign In
-                      </Button>
-                      <Button
-                        variant="ghost-hero"
-                        size="lg"
-                        aria-describedby="explore-desc"
-                      >
-                        <Sparkles className="mr-2" aria-hidden="true" />
-                        Explore Personas
-                      </Button>
-                    </div>
-                  </div>
-                )
-              )}
-              <span id="start-chat-desc" className="sr-only">
-                Begin a conversation with M.O.M AI companion
-              </span>
-              <span id="go-to-app-desc" className="sr-only">
-                Access your personalized M.O.M AI dashboard
-              </span>
-              <span id="start-chatting-desc" className="sr-only">
-                Begin your journey with M.O.M AI companion
-              </span>
-              <span id="sign-in-desc" className="sr-only">
-                Sign in to your existing M.O.M AI account
-              </span>
-              <span id="explore-desc" className="sr-only">
-                Discover different AI personality types available
-              </span>
-            </div> */}
           </div>
           
           {/* Enhanced Visual Storytelling Section */}

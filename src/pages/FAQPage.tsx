@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useDocumentTitle } from "@/hooks/useDocumentTitle";
-import { BASE_PATH } from "@/config";
 
 const FAQPage = () => {
   useDocumentTitle("FAQ - Not Every Mom");
@@ -60,7 +59,7 @@ const FAQPage = () => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => navigate(BASE_PATH)}
+            onClick={() => navigate('/')}
             className="flex items-center gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
